@@ -18,6 +18,8 @@ spring:
     username: root
     password: root
     type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    open-in-view: false
 
 # =================================
 # = Logging
