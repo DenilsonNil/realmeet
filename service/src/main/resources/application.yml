@@ -10,6 +10,8 @@ server:
 # = Spring
 # =================================
 spring:
+  profiles:
+    active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/bluemeet?createDatabaseIfNotExist=true&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
@@ -20,7 +22,8 @@ spring:
 # =================================
 # = Logging
 # =================================
-logging:
-  level:
-    org.springframework: ERROR
-    org.flywaydb: ERROR
+boot:
+  logging:
+    LogLevel:
+      org.springframework: INFO
+      org.flywaydb: INFO
